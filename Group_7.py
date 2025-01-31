@@ -2,7 +2,7 @@ product_name = input("Enter product name: ")
 purchased_quantity = int(input("Enter purchased quantity : "))  #Must be positive integers
 
 discounted_rate_1 = 0.10  #Equivalent to 10%
-discounted_rate_2 = 0.15  #Equivalent to 10%
+discounted_rate_2 = 0.15  #Equivalent to 15%
 
 if purchased_quantity > 0:
     cost_per_product = float(input("Cost per item: "))  # must be positive floating integers
@@ -11,7 +11,7 @@ if purchased_quantity > 0:
         if 0 < sold_quantity <= purchased_quantity:
             selling_price_per_product = float(input("Selling price per item: "))  #must be positive floating-point numbers
             if type(selling_price_per_product) == float and selling_price_per_product>0.0:
-                province = input("Enter province: ")  #must be one of the listed provinces
+                province = input("Enter province: ").upper()  #must be one of the listed provinces
                 if province == "ON":
                     GST_or_HST = 13
                     total_purchase_cost = purchased_quantity * cost_per_product
